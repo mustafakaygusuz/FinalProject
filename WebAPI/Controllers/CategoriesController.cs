@@ -14,6 +14,11 @@ namespace WebAPI.Controllers
     {
         private ICategoryService _categoryService;
 
+        public CategoriesController(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
         [HttpGet("getall")]
         public IActionResult GetAll()
         {            
